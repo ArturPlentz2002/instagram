@@ -29,16 +29,4 @@ export default async function SignInPage() {
           >
             {findIcon(provider.name)}
             <span>
-              Entrar com o <strong>{provider.name}</strong>
-            </span>
-          </button>
-        </form>
-      ))}
-    </div>
-  );
-}
-/////
-////
-//
-//
-//
+              Entrar c
