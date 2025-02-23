@@ -2,8 +2,8 @@ import { auth, signOut } from "auth";
 import Link from "next/link";
 import Image from "next/image";
 import { getUserByEmail } from "@/actions";
- //import Button from "./Button";
- //import ButtonLink from "./ButtonLink";
+ import Button from "./Button";
+ import ButtonLink from "./ButtonLink";
 async function Navbar() {
   
   async function Navbar() {
@@ -16,9 +16,10 @@ async function Navbar() {
         Home
       </Link>
       <div>
-        {session && session.user ? (
+        {session? (
           <div className="flex gap-4 items-center">
-            <p>{session.user.name}</p>
+             <p className="text-white font-medium">{user.name}</p>
+             {user.image && (
             <form
               action={async () => {
                 "use server";
