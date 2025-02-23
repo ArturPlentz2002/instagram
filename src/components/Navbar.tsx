@@ -1,12 +1,17 @@
-import { auth, signIn, signOut } from "auth";
+import { auth, signOut } from "auth";
 import Link from "next/link";
-
+import Image from "next/image";
+import { getUserByEmail } from "@/actions";
+// import Button from "./Button";
+// import ButtonLink from "./ButtonLink";
 async function Navbar() {
   const session = await auth();
 
+  const user = await getUserByEmail(session.user.email);
+
   return (
-    <div className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <Link href="/" className="text-white text-lg font-bold">
+    <div className="bg-gray-800 text-white px -10 py-5 flex justify-between items-center">
+      <Link href="/" className="text-white hover:text-zinc-200 text-lg font-bld">
         Home
       </Link>
       <div>
@@ -39,4 +44,5 @@ async function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar;  
+
