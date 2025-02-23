@@ -20,7 +20,18 @@ async function Navbar() {
           <div className="flex gap-4 items-center">
              <p className="text-white font-medium">{user.name}</p>
              {user.image && (
-            <form
+                <Image
+                src={user.image}
+                alt={user.name}
+                width={40}
+                height={40}
+                className="rounded-full"
+                />
+              )}
+
+           
+           
+           <form
               action={async () => {
                 "use server";
                 await signOut();
