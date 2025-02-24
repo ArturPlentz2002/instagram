@@ -1,5 +1,5 @@
 import { getUserByEmail } from "@/actions";
-import ProfileForm from "@/components/ProfileForm";
+//import ProfileForm from "@/components/ProfileForm";
 import { auth } from "auth";
 import Image from "next/image";
 import { redirect } from "next/navigation";
