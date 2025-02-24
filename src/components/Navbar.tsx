@@ -7,9 +7,11 @@ import ButtonLink from "./ButtonLink";
 
 async function Navbar() {
   const session = await auth();
-  const user = await getUserByEmail(session?.user.email);
 
-  return (
+  
+  
+  const user = session?.user ? await getUserByEmail(session.user.email) : null;
+    return (
     <div className="bg-gray-800 text-white px-10 py-5 flex justify-between items-center">
       <Link
         href="/"
@@ -63,6 +65,7 @@ async function Navbar() {
       </div>
     </div>
   );
-}
+  }
+
 
 export default Navbar;
