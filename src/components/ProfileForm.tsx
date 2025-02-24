@@ -2,6 +2,7 @@
 
 import { User } from "types/User";
 import { useFormState } from "react-dom";
+import { updateUserProfile } from "@/actions";
 
 type ProfileFormProps = {
     user: User;
@@ -12,3 +13,6 @@ type ProfileFormProps = {
       message: "",
       type: "success",
     });
+    return <div>
+        {}
+    </div>
