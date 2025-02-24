@@ -2,7 +2,7 @@ import { auth, signOut } from "auth";
 import Link from "next/link";
 import Image from "next/image";
 import { getUserByEmail } from "@/actions";
-import Button from "./Button";
+import Button from "@/components/Button";
 import ButtonLink from "./ButtonLink";
 
 async function Navbar() {
